@@ -6,6 +6,7 @@ final chats = [
     "message": " Hey, how are you?",
     "blueTick": false,
     "viewed": false,
+    "unreadCount":4,
     "time": "Yesterday"
   },
   {
@@ -15,6 +16,7 @@ final chats = [
     "message": " Hey, how are you?",
     "blueTick": false,
     "viewed": false,
+    "unreadCount": 1,
     "time": "Yesterday"
   },
   {
@@ -24,6 +26,7 @@ final chats = [
     "message": " Hey, how are you?",
     "blueTick": false,
     "viewed": false,
+    "unreadCount": 1,
     "time": "Yesterday"
   },
   {

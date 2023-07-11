@@ -45,7 +45,7 @@ class CallsScreen extends StatelessWidget {
                         leading: CircleAvatar(
                           backgroundImage: NetworkImage(calls[index]['imageUrl'] as String),
                         ),
-                        title: Text(calls[index]['name'] as String,style: TextStyle(
+                        title: Text(calls[index]['name'] as String,style: const TextStyle(
                 fontWeight: FontWeight.w400,
                 color: Colors.white,
                 textBaseline: TextBaseline.alphabetic
@@ -70,24 +70,27 @@ class CallsScreen extends StatelessWidget {
                                     
                                   ),
                             Text(calls[index]['time'] as String,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Color.fromRGBO(133, 149, 159, 1),
                                   fontSize: 14))
                           ],
                         ),
-                        trailing: index.isEven
-                            ? Icon(Icons.call,
-                              size: 20,
-                              weight: 100,
-                              grade: -25,
-                              color: const Color(0xff00a884)
-                            )
-                            : Icon(Icons.videocam,
-                              size: 20,
-                              weight: 100,
-                              grade: -25,
-                              color: const Color(0xff00a884)
-                            ));
+                        trailing: Padding(
+                          padding: const EdgeInsets.only(right: 15),
+                          child: index.isEven
+                              ? Icon(Icons.call,
+                                size: 20,
+                                weight: 100,
+                                grade: -25,
+                                color: const Color(0xff00a884)
+                              )
+                              : Icon(Icons.videocam,
+                                size: 20,
+                                weight: 100,
+                                grade: -25,
+                                color: const Color(0xff00a884)
+                              ),
+                        ),);
                   }),
             ),
         ],

@@ -18,13 +18,21 @@ class StatusScreen extends StatelessWidget {
                     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5HCgPxeyRGQgieXNBopHwg1KINwrplclcyA&usqp=CAU'),
               ),
               Positioned(
-                  bottom: -2,
+                  bottom: 0,
                   right: -2,
-                  child: Icon(
-                    Icons.add_circle,
-                    color: Color.fromARGB(255, 16, 97, 38),
-                    size: 20,
-                    fill: 1,
+                  child: CircleAvatar(
+                    radius: 10,
+                    backgroundColor: Color.fromRGBO(17, 27, 33, 1),
+                    child: CircleAvatar(
+                      radius: 8,
+                      backgroundColor: Colors.green,
+                      child: Icon(
+                        Icons.add,
+                        size: 14,
+                        grade: 200,
+                        color: Colors.white,
+                      ),
+                    ),
                   ))
             ]),
             title: Text(

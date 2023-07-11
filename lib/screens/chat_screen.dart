@@ -14,8 +14,7 @@ class ChatScreen extends StatelessWidget {
             titleTextStyle: const TextStyle(
                 fontWeight: FontWeight.w400,
                 color: Colors.white,
-                textBaseline: TextBaseline.alphabetic
-                ),
+                textBaseline: TextBaseline.alphabetic),
             leading: CircleAvatar(
               backgroundImage: NetworkImage(chats[index]['image'] as String),
             ),
@@ -25,47 +24,61 @@ class ChatScreen extends StatelessWidget {
             subtitle: Row(
               children: [
                 chats[index]['blueTick'] == true
-                    ? Icon(
+                    ? const Icon(
                         Icons.done_all,
                         color: Color(0xff4FB6EC),
                         size: 14,
                         weight: 100,
                         grade: -25,
-                  
                       )
-                    : Icon(
+                    : const Icon(
                         Icons.done_all,
                         color: Color.fromARGB(255, 116, 117, 118),
                         size: 14,
                         weight: 100,
                         grade: -25,
-                        
                       ),
                 Text(chats[index]['message'] as String,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Color.fromRGBO(133, 149, 159, 1), fontSize: 14))
               ],
             ),
-            trailing: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  chats[index]['time'] as String,
-                  style: TextStyle(
-                      fontSize: 12, color: Color.fromRGBO(133, 149, 159, 1)),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                chats[index]['viewed'] == false
-                    ? Icon(Icons.circle,
-                        size: 22, color: const Color(0xff00a884))
-                    : Visibility(
-                        child: Icon(Icons.circle),
-                        visible: false,
-                      ),
-              ],
+            trailing: Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    chats[index]['time'] as String,
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: chats[index]['viewed'] == false
+                            ? const Color(0xff00a884)
+                            : const Color.fromRGBO(133, 149, 159, 1)),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  chats[index]['viewed'] == false
+                      ? CircleAvatar(
+                          backgroundColor: const Color(0xff00a884),
+                          radius: 10,
+                          child: Text(
+                            chats[index]['unreadCount'].toString(),
+                            style: const TextStyle(
+                              fontSize: 12,
+                              color: Color.fromRGBO(17, 27, 33, 1),
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        )
+                      : const Visibility(
+                          visible: false,
+                          child: SizedBox(),
+                        ),
+                ],
+              ),
             ),
           );
         },
