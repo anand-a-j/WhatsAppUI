@@ -22,8 +22,8 @@ final chats = [
     "image":
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVy90XssVZ2_sDX2ZmSueKYZvwuP1M98_1Hg&usqp=CAU",
     "message": " Hey, how are you?",
-    "blueTick": true,
-    "viewed": true,
+    "blueTick": false,
+    "viewed": false,
     "time": "Yesterday"
   },
   {
@@ -40,7 +40,7 @@ final chats = [
     "image":
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrmotygT1oC20ZkEGPLzbJiDHhqjNu3aM2LA&usqp=CAU",
     "message": " Hey, how are you?",
-    "blueTick": false,
+    "blueTick": true,
     "viewed": true,
     "time": "Yesterday"
   },

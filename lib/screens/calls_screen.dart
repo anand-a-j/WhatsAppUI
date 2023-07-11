@@ -20,7 +20,7 @@ class CallsScreen extends StatelessWidget {
             subtitle: Text('Share a link for your WhatsApp call'),
           ),
          const Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 0),
+            padding: EdgeInsets.symmetric(horizontal: 16,vertical: 0),
             child: SizedBox(
               width: double.infinity,
               child: Text(

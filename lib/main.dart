@@ -17,6 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Roboto'
+      ),
       home: ChatScreen(chats: chats),
       // home: CallsScreen(calls: calls)
       // home: StatusScreen(recentStatus: recentstatus, viewedStatus: viewedStatus)

@@ -14,7 +14,8 @@ class ChatScreen extends StatelessWidget {
             titleTextStyle: const TextStyle(
                 fontWeight: FontWeight.w400,
                 color: Colors.black,
-                textBaseline: TextBaseline.alphabetic),
+                textBaseline: TextBaseline.alphabetic
+                ),
             leading: CircleAvatar(
               backgroundImage: NetworkImage(chats[index]['image'] as String),
             ),
@@ -37,7 +38,8 @@ class ChatScreen extends StatelessWidget {
                 Text(chats[index]['message'] as String,
                     style: TextStyle(
                         color: Color.fromARGB(255, 117, 117, 117),
-                        fontSize: 14))
+                        fontSize: 14
+                        ))
               ],
             ),
             trailing: Column(
