@@ -10,10 +10,10 @@ class ChatScreen extends StatelessWidget {
       body: ListView.builder(
         itemBuilder: (ctx, index) {
           return ListTile(
-            tileColor: Colors.white,
+            tileColor: const Color.fromRGBO(17, 27, 33, 1),
             titleTextStyle: const TextStyle(
                 fontWeight: FontWeight.w400,
-                color: Colors.black,
+                color: Colors.white,
                 textBaseline: TextBaseline.alphabetic
                 ),
             leading: CircleAvatar(
@@ -28,18 +28,22 @@ class ChatScreen extends StatelessWidget {
                     ? Icon(
                         Icons.done_all,
                         color: Color(0xff4FB6EC),
-                        size: 18,
+                        size: 14,
+                        weight: 100,
+                        grade: -25,
+                  
                       )
                     : Icon(
                         Icons.done_all,
                         color: Color.fromARGB(255, 116, 117, 118),
-                        size: 18,
+                        size: 14,
+                        weight: 100,
+                        grade: -25,
+                        
                       ),
                 Text(chats[index]['message'] as String,
                     style: TextStyle(
-                        color: Color.fromARGB(255, 117, 117, 117),
-                        fontSize: 14
-                        ))
+                        color: Color.fromRGBO(133, 149, 159, 1), fontSize: 14))
               ],
             ),
             trailing: Column(
@@ -48,14 +52,15 @@ class ChatScreen extends StatelessWidget {
               children: [
                 Text(
                   chats[index]['time'] as String,
-                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                  style: TextStyle(
+                      fontSize: 12, color: Color.fromRGBO(133, 149, 159, 1)),
                 ),
                 const SizedBox(
                   height: 5,
                 ),
                 chats[index]['viewed'] == false
                     ? Icon(Icons.circle,
-                        size: 22, color: const Color.fromARGB(255, 66, 210, 71))
+                        size: 22, color: const Color(0xff00a884))
                     : Visibility(
                         child: Icon(Icons.circle),
                         visible: false,
@@ -69,7 +74,3 @@ class ChatScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-   

@@ -14,18 +14,25 @@ class CallsScreen extends StatelessWidget {
         children: [
          const ListTile(
             leading: CircleAvatar(
-              backgroundColor: Colors.teal,
+              backgroundColor: Color(0xff00a884),
             ),
-            title: Text('Create call link'),
-            subtitle: Text('Share a link for your WhatsApp call'),
+            title: Text('Create call link',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,),),
+            subtitle: Text('Share a link for your WhatsApp call',
+                style: TextStyle(color: Color.fromRGBO(133, 149, 159, 1)),),
           ),
+          const SizedBox(height: 5,),
          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16,vertical: 0),
             child: SizedBox(
               width: double.infinity,
               child: Text(
                 'Recent',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14
+                    )
+                    ,
                 textAlign: TextAlign.left,
               ),
             ),
@@ -38,7 +45,11 @@ class CallsScreen extends StatelessWidget {
                         leading: CircleAvatar(
                           backgroundImage: NetworkImage(calls[index]['imageUrl'] as String),
                         ),
-                        title: Text(calls[index]['name'] as String),
+                        title: Text(calls[index]['name'] as String,style: TextStyle(
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                textBaseline: TextBaseline.alphabetic
+                ),),
                         subtitle: Row(
                           children: [
                             calls[index]['incoming'] == true
@@ -46,18 +57,37 @@ class CallsScreen extends StatelessWidget {
                                     Icons.call_received,
                                     color: Colors.red,
                                     size: 14,
+                                  weight: 100,
+                                  grade: -25,
+                                    
                                   )
                                 : const Icon(
                                     Icons.call_made,
                                     color: Colors.green,
                                     size: 14,
+                                  weight: 100,
+                                  grade: -25,
+                                    
                                   ),
-                            Text(calls[index]['time'] as String)
+                            Text(calls[index]['time'] as String,
+                              style: TextStyle(
+                                  color: Color.fromRGBO(133, 149, 159, 1),
+                                  fontSize: 14))
                           ],
                         ),
                         trailing: index.isEven
-                            ? Icon(Icons.call)
-                            : Icon(Icons.videocam));
+                            ? Icon(Icons.call,
+                              size: 20,
+                              weight: 100,
+                              grade: -25,
+                              color: const Color(0xff00a884)
+                            )
+                            : Icon(Icons.videocam,
+                              size: 20,
+                              weight: 100,
+                              grade: -25,
+                              color: const Color(0xff00a884)
+                            ));
                   }),
             ),
         ],
