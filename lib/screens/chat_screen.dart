@@ -84,6 +84,11 @@ class ChatScreen extends StatelessWidget {
         },
         itemCount: chats.length,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color(0xff00a884),
+        child: const Icon(Icons.chat),
+      ),
     );
   }
 }

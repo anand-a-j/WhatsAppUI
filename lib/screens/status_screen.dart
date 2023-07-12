@@ -149,6 +149,25 @@ class StatusScreen extends StatelessWidget {
           )
         ],
       ),
+      floatingActionButton: Wrap(
+        crossAxisAlignment: WrapCrossAlignment.center,
+        spacing: 10,
+        direction: Axis.vertical,
+        
+        children: [
+          FloatingActionButton.small(
+            onPressed: () {},
+            backgroundColor: Color.fromRGBO(32, 44, 51, 1),
+              child: const Icon(Icons.edit,size: 18,grade: -25,),
+          ),
+       FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color(0xff00a884),
+        child: const Icon(Icons.photo_camera),
+      ),
+          
+        ],
+      )
     );
   }
 }

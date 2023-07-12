@@ -90,10 +90,17 @@ class CallsScreen extends StatelessWidget {
                                 grade: -25,
                                 color: const Color(0xff00a884)
                               ),
-                        ),);
-                  }),
+                        ),
+                        );
+                  },
+                  ),
             ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color(0xff00a884),
+        child: const Icon(Icons.add_ic_call),
       ),
     );
   }
