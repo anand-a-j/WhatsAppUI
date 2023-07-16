@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_chat_ui/screens/home_screen.dart';
+import 'package:whatsapp_chat_ui/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             )
           )
           ),
-      home: HomeScreen(),
+      home: SplashScreen(),
     );
   }
 }

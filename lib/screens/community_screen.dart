@@ -11,10 +11,12 @@ class CoummunityScreen extends StatelessWidget {
         children: [
           ListTile(
             leading: CircleAvatar(),
+            titleTextStyle: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),
             title: Text("New community"),
           ),
-          SizedBox(
-            height: 10,
+          Divider(
+            thickness: 8,
+            color: Color.fromARGB(255, 6, 11, 14),
           ),
           CommunityCard()
         ],
