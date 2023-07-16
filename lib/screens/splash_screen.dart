@@ -10,7 +10,7 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           const SizedBox(
+            const SizedBox(
               height: 260,
             ),
             SizedBox(
@@ -21,16 +21,17 @@ class SplashScreen extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-           const SizedBox(
+            const SizedBox(
               height: 260,
             ),
             Center(
               child: Column(
                 children: [
-                const  Text("from",
-                      style: TextStyle(
-                          color: Color.fromRGBO(133, 149, 159, 1),
-                          fontSize: 14),),
+                  const Text(
+                    "from",
+                    style: TextStyle(
+                        color: Color.fromRGBO(133, 149, 159, 1), fontSize: 14),
+                  ),
                   const SizedBox(
                     height: 5,
                   ),
@@ -42,9 +43,12 @@ class SplashScreen extends StatelessWidget {
                         height: 20,
                         width: 20,
                       ),
-                     const Text("  Meta",style: TextStyle(
-                          color: Color.fromRGBO(255, 255, 255, 1),
-                          fontSize: 16),)
+                      const Text(
+                        " Meta",
+                        style: TextStyle(
+                            color: Color.fromRGBO(255, 255, 255, 1),
+                            fontSize: 16),
+                      )
                     ],
                   )
                 ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_chat_ui/screens/home_screen.dart';
 import 'package:whatsapp_chat_ui/screens/splash_screen.dart';
 
 void main() {
@@ -13,19 +14,27 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          scaffoldBackgroundColor: const Color.fromRGBO(17, 27, 33, 1),
-          primarySwatch: Colors.teal,
-          fontFamily: 'Roboto',
-          appBarTheme:const AppBarTheme(
-            iconTheme: IconThemeData(
-              weight: 100,
-              grade: -25,
-              fill: 0,
-              color: Color.fromRGBO(164, 176, 183, 1)
-            )
-          )
+        scaffoldBackgroundColor: const Color.fromRGBO(17, 27, 33, 1),
+        primarySwatch: Colors.teal,
+        fontFamily: 'Roboto',
+        appBarTheme: const AppBarTheme(
+          iconTheme: IconThemeData(
+            weight: 100,
+            grade: -25,
+            fill: 0,
+            color: Color.fromRGBO(164, 176, 183, 1),
           ),
-      home: SplashScreen(),
+        ),
+      ),
+      home: FutureBuilder(
+          future: Future.delayed(const Duration(seconds: 2)),
+          builder: (context, snap) {
+            if (snap.connectionState == ConnectionState.done) {
+              return const HomeScreen();
+            } else {
+              return const SplashScreen();
+            }
+          }),
     );
   }
 }
